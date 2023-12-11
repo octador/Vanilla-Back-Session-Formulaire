@@ -9,7 +9,7 @@
   
   <?php
 
-if (isset($_POST['submit_form'])) {
+if (isset($_POST['submit-form'])) {
 
 $lastName = $_POST['last-name'];
 $firstName = $_POST['first-name'];
