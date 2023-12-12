@@ -23,23 +23,19 @@
     <!-- --------------------------------exo2---------------------------- -->
     <?php
     session_start();
-    session_unset();
+    // session_unset();
     if (
         isset($_SESSION["firstname"]) && !empty($_SESSION["firstname"])
         && isset($_SESSION["lastname"]) && !empty($_SESSION["lastname"])
         && isset($_SESSION["age"]) && !empty($_SESSION["age"])
-    ) {
+    ){ var_dump($_SESSION);
     ?>
         <p><?php echo $_SESSION["firstname"] ?></p>
         <p><?php echo $_SESSION["lastname"] ?></p>
         <p><?php echo $_SESSION["age"] ?></p>
-
-        
-
     <?php 
     } else {
     ?>
-
         <form action="./traitement.php" method="post">
 
             <label for="firstname"> Prénom : </label>
@@ -51,11 +47,10 @@
             <label for="age"> Age : </label>
             <input type="text" name="age">
 
-            <button type="submit">envoyer</button>
-            
+            <button type="submit">envoyer</button>          
         </form>
     <?php
-    }
+     }
     ?>
 </body>
 

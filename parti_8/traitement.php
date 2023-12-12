@@ -21,7 +21,6 @@ if (
     && isset($_POST["lastname"]) && !empty($_POST["lastname"])
     && isset($_POST["age"]) && !empty($_POST["age"])
 ) {
-
     session_start();
 
     $_SESSION["firstname"] = $_POST["firstname"];
